@@ -1,12 +1,12 @@
-<h1>Add Task</h1>
+<h2>Add Task</h2>
 
 <div class="row">
   <form class="col s12">
     <div class="row">
       <div class="input-field col s6">
-        <input  id="task_name" type="text" class="validate">
+        <input [(ngModel)]="task.name" name="task_name" id="task_name" type="text" class="validate">
         <label for="task_name">Task Name</label>
-        <button class="waves-effect waves-light btn">Add</button>
+        <button class="waves-effect waves-light btn" (click)="onSubmit()">Add</button>
       </div>
     </div>
  </form>
