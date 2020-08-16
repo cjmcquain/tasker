@@ -1,1 +1,17 @@
-<p>task-list works!</p>
+<h1>Tasks</h1>
+
+
+<p *ngIf="!tasks || tasks.length == 0">There are currently no tasks.</p>
+<table *ngIf="tasks.length > 0" class="striped table-responsive">
+  <thead>
+    <tr>
+        <th>Task</th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <tr *ngFor="let task of tasks">
+      <td>{{ task.payload.doc.data().name }}</td>
+    </tr>
+  </tbody>
+</table>
